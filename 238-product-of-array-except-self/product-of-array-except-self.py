@@ -12,13 +12,13 @@ class Solution:
         prod = 1
         for i in range(len(nums)-1,-1,-1):
             if i == len(nums)-1:
-                right.insert(0,prod)
+                right.append(prod)
             else : 
                 prod = prod * nums[i+1]
-                right.insert(0,prod)
+                right.append(prod)
         final_list = []
         for i in range(len(nums)):
-            temp = left[i]*right[i]
+            temp = left[i]*right[(len(nums)-(i+1))]
             final_list.append(temp)
         return final_list
 
