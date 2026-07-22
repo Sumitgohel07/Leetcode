@@ -8,9 +8,9 @@ class Solution:
                 my_dict[key] += 1
         result = []
         for i in range(k):
-            key,value = max(my_dict.items(),key=lambda x : x[1])
-            result.append(key)
-            del my_dict[key]
+            temp = max(my_dict,key = my_dict.get )
+            result.append(temp)
+            del my_dict[temp]
         return result
             
 
