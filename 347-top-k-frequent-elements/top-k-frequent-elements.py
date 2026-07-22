@@ -6,12 +6,12 @@ class Solution:
                 my_dict[key] = 1
             else:
                 my_dict[key] += 1
-        my_dict = dict(sorted(my_dict.items(),key = lambda x : x[1],reverse=True))
-        List = []
-        for key,value in my_dict.items():
-            List.append([key,value])
+        sorted_item = sorted(my_dict.items(),key = lambda x : x[1],reverse=True)
+        freq_list = []
+        for key,value in sorted_item:
+            freq_list.append([key,value])
         result = []
         for i in range(k):
-            result.append(List[i][0])
+            result.append(freq_list[i][0])
         return result
 
