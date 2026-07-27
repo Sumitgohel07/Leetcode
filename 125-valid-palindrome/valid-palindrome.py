@@ -13,7 +13,8 @@ class Solution:
             right-=1
         return True
 
-
+       # my firts solution :
+       
         # s1 = ""
         # for char in s:
         #     if char.isalnum():
