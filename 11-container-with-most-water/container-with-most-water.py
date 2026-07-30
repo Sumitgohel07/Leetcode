@@ -4,9 +4,7 @@ class Solution:
         right = len(height)-1
         max_area = 0
         while left<right:
-            height_water = min(height[left],height[right])
-            width = right-left
-            area = height_water*width
+            area = min(height[left],height[right])*(right-left)
             max_area = max(max_area,area)
             if height[left]<=height[right]:
                 left+=1
