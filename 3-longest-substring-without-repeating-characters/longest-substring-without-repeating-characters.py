@@ -4,7 +4,7 @@ class Solution:
         left=0
         right=0
         seen = set()
-        while left <= right and right <= len(s)-1:
+        while left <= right and right < len(s):
             if s[right] not in seen:
                 seen.add(s[right])
                 right+=1
