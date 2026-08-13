@@ -8,9 +8,7 @@ class Solution:
             window_sum += nums[right]
 
             while window_sum >= target:
-                length = right - left + 1
-                if length < min_len:
-                    min_len = length
+                min_len = min(min_len, right - left + 1)
                 window_sum -= nums[left]
                 left += 1
 
