@@ -10,13 +10,9 @@ class Solution:
         left = 0
         right = len(s1)
         temp_count = dict()
-        flag = 1
+        for i in range(left,right):
+            temp_count[s2[i]] = temp_count.get(s2[i], 0) + 1
         while right <= len(s2):
-            if flag == 1:
-                for i in range(left,right):
-                    temp_count[s2[i]] = temp_count.get(s2[i], 0) + 1
-                    flag = 0
-
             if s1_count == temp_count:
                 return True
             else:
