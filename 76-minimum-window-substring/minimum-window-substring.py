@@ -15,8 +15,9 @@ class Solution:
                 if t_dict[s[right]] == window_dict[s[right]]:
                     have+=1
             while have == need:
-                if right - left + 1 < best_len:
-                    best_len = right - left + 1
+                x = right - left + 1
+                if x < best_len:
+                    best_len = x
                     best_left = left
                 if s[left] in window_dict:
                     if window_dict[s[left]] == t_dict[s[left]]:
