@@ -1,7 +1,5 @@
 class Solution:
     def minWindow(self, s: str, t: str) -> str:
-        if len(t) > len(s):
-            return ""
         t_dict = {}
         for i in range(len(t)):
             t_dict[t[i]] = t_dict.get(t[i],0) + 1
